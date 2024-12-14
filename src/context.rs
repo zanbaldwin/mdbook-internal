@@ -51,6 +51,7 @@ impl Default for Config {
 impl Config {
     pub(crate) fn from_context(config: &Table) -> Result<Self, ConfigError> {
         let remove = match config.get("remove") {
+            None => Ok(DEFAULT_REMOVE),
             Some(Value::Boolean(toggle)) => Ok(*toggle),
             _ => Err(ConfigError::new("`remove` must be a boolean")),
         }?;
