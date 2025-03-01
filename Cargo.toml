@@ -18,4 +18,4 @@ regex = { version = "1.10", default-features = false }
 semver = { version = "1.0", default-features = true }
 serde_json = { version = "1.0", default-features = false }
 # Need to use v0.5.x because that's what mdbook uses.
-toml = { version = "0.5", default-features = false }
+toml = { version = "0.8", default-features = false }
